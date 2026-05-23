@@ -977,6 +977,18 @@
       flex: 0 0 calc(33.333% - 16px);
       max-width: 240px;
     }
+    @media (max-width: 800px) {
+      .person-listing.providers-grid .person-item {
+        flex: 0 0 calc(50% - 12px);
+        max-width: calc(50% - 12px);
+      }
+    }
+    @media (max-width: 480px) {
+      .person-listing.providers-grid .person-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
 
     .person-item {
       border-radius: var(--radius-card);

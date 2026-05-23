@@ -1483,12 +1483,18 @@
       }
     }
 
-    @media (max-width: 560px) {
-      .person-listing.providers-grid .person-item {
-        flex: 0 0 calc(50% - 12px);
-        max-width: calc(50% - 12px);
+    @media (max-width: 800px) {
+        .person-listing.providers-grid .person-item {
+          flex: 0 0 calc(50% - 12px);
+          max-width: calc(50% - 12px);
+        }
       }
-    }
+      @media (max-width: 480px) {
+        .person-listing.providers-grid .person-item {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
 
     /* ============================================================
        FOOTER
