@@ -494,6 +494,19 @@
       gap: 6px;
       margin-bottom: 12px;
     }
+    .lazaderm-form__field--row {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .lazaderm-form__field-half {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+      min-width: 0;
+    }
 
     .lazaderm-form__label {
       font-family: var(--font-body);
@@ -954,8 +967,15 @@
     }
 
     .person-listing.providers-grid {
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: stretch;
+      gap: 24px;
+    }
+    .person-listing.providers-grid .person-item {
+      flex: 0 0 calc(33.333% - 16px);
+      max-width: 240px;
     }
 
     .person-item {
@@ -1755,10 +1775,17 @@
                   <div class="lazaderm-form__banner" role="alert">There was a problem with your submission. Please review the fields below.</div>
                   <h4 class="lazaderm-form__heading">Book Your Free Consultation</h4>
 
-                  <div class="lazaderm-form__field">
-                    <label class="lazaderm-form__label" for="hero-name">Full Name <span class="req" aria-hidden="true">*</span></label>
-                    <input class="lazaderm-form__input" type="text" id="hero-name" name="full_name" autocomplete="name" required placeholder="Jane Doe" aria-describedby="hero-name-error" />
-                    <span class="lazaderm-form__error" id="hero-name-error"></span>
+                  <div class="lazaderm-form__field lazaderm-form__field--row">
+                    <div class="lazaderm-form__field-half">
+                      <label class="lazaderm-form__label" for="hero-first-name">First Name <span class="req" aria-hidden="true">*</span></label>
+                      <input class="lazaderm-form__input" type="text" id="hero-first-name" name="first_name" autocomplete="given-name" required placeholder="Jane" aria-describedby="hero-first-name-error" />
+                      <span class="lazaderm-form__error" id="hero-first-name-error"></span>
+                    </div>
+                    <div class="lazaderm-form__field-half">
+                      <label class="lazaderm-form__label" for="hero-last-name">Last Name <span class="req" aria-hidden="true">*</span></label>
+                      <input class="lazaderm-form__input" type="text" id="hero-last-name" name="last_name" autocomplete="family-name" required placeholder="Doe" aria-describedby="hero-last-name-error" />
+                      <span class="lazaderm-form__error" id="hero-last-name-error"></span>
+                    </div>
                   </div>
 
                   <div class="lazaderm-form__field">
@@ -2047,10 +2074,17 @@
             <div class="lazaderm-form__banner" role="alert">There was a problem with your submission. Please review the fields below.</div>
             <h3 class="lazaderm-form__heading">Book Your Free Consultation</h3>
 
-            <div class="lazaderm-form__field">
-              <label class="lazaderm-form__label" for="cta-name">Full Name <span class="req" aria-hidden="true">*</span></label>
-              <input class="lazaderm-form__input" type="text" id="cta-name" name="full_name" autocomplete="name" required placeholder="Jane Doe" aria-describedby="cta-name-error" />
-              <span class="lazaderm-form__error" id="cta-name-error"></span>
+            <div class="lazaderm-form__field lazaderm-form__field--row">
+              <div class="lazaderm-form__field-half">
+                <label class="lazaderm-form__label" for="cta-first-name">First Name <span class="req" aria-hidden="true">*</span></label>
+                <input class="lazaderm-form__input" type="text" id="cta-first-name" name="first_name" autocomplete="given-name" required placeholder="Jane" aria-describedby="cta-first-name-error" />
+                <span class="lazaderm-form__error" id="cta-first-name-error"></span>
+              </div>
+              <div class="lazaderm-form__field-half">
+                <label class="lazaderm-form__label" for="cta-last-name">Last Name <span class="req" aria-hidden="true">*</span></label>
+                <input class="lazaderm-form__input" type="text" id="cta-last-name" name="last_name" autocomplete="family-name" required placeholder="Doe" aria-describedby="cta-last-name-error" />
+                <span class="lazaderm-form__error" id="cta-last-name-error"></span>
+              </div>
             </div>
 
             <div class="lazaderm-form__field">
