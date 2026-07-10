@@ -1,0 +1,8 @@
+{
+  "name": "lazaderm-landing-pages",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node scripts/inject-tracking.js"
+  }
+}
